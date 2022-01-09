@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,11 +31,15 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 
-const App = ({ dispatch }) => {
+const App = () => {
   const [user] = useAuthState(auth);
-  if(user){
-    dispatch(login(user.email, user.uid))
-  }
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(login(user?.email, user?.uid))
+  }, [user])
+
   return (
     <Router>
       {user ?
