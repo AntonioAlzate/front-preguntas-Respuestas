@@ -14,6 +14,7 @@ const FormPage = () => {
 
     const onSubmit = data => {
         data.userId = auth.uid;
+        data.ownerEmail=auth.email;
         dispatch(postQuestion(data));
     };
 
