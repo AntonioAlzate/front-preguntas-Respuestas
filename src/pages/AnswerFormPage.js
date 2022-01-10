@@ -21,7 +21,7 @@ const FormPage = ( {match}) => {
 
         const emailData = {
             emailTo: question.question.ownerEmail,
-            body: `Se ha agregado una respuesta a tu pregunta \"${question.question.question}\"`
+            body: `Se ha agregado una respuesta a tu pregunta "${question.question.question}"`
         }
 
         const sendEmail = question.question.ownerEmail === auth.email ? false : true;

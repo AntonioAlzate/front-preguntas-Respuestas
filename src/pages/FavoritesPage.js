@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { obtenerFavoritosAction } from '../actions/profileActions';
 import { fetchQuestions } from '../actions/questionActions';
@@ -15,7 +15,6 @@ const FavoritesPage = () => {
     useEffect(() => {
         dispatch(fetchQuestions());
         dispatch(obtenerFavoritosAction(auth.uid));
-    
       }, [dispatch]);
 
       const renderQuestions = () => {
