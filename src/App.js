@@ -24,12 +24,12 @@ import ProfilePage from './pages/ProfilePage';
 import FavoritesPage from './pages/FavoritesPage';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCTySyvuIDPg7RWF6ceuuwC2t3BEiAK38o",
-  authDomain: "question-app-demo.firebaseapp.com",
-  projectId: "question-app-demo",
-  storageBucket: "question-app-demo.appspot.com",
-  messagingSenderId: "1038673531562",
-  appId: "1:1038673531562:web:da90421f639a3115dcf6d3"
+  apiKey: "AIzaSyDUhnIiSKTrzZAS_arbEyPMTZIvkPkm7PE",
+  authDomain: "preguntas-respuestas-50b8f.firebaseapp.com",
+  projectId: "preguntas-respuestas-50b8f",
+  storageBucket: "preguntas-respuestas-50b8f.appspot.com",
+  messagingSenderId: "883930830938",
+  appId: "1:883930830938:web:98dcdc700b19a89036a063"
 });
 
 const auth = firebase.auth();
