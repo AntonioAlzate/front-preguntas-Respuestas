@@ -35,8 +35,8 @@ const FavoritesPage = () => {
       };
 
     return ( 
-        <section>
-        <h1>Favoritos</h1>
+        <section className="mt-5">
+        <h1>Favorites</h1>
         {renderQuestions()}
         </section>
      );

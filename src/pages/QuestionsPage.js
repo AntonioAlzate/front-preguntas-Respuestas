@@ -30,7 +30,7 @@ const QuestionsPage = () => {
   };
 
   return (
-    <section>
+    <section className="mt-5">
       <h1>Questions</h1>
       {renderQuestions()}
     </section>

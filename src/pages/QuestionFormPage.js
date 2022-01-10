@@ -25,7 +25,7 @@ const FormPage = () => {
     }, [question.redirect, history])
 
     return (
-        <section>
+        <section className="mt-5">
             <h1>New Question</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -55,7 +55,7 @@ const FormPage = () => {
                     <label for="question">Question</label>
                     <textarea id="question" {...register("question", { required: true, maxLength: 300 })} />
                 </div>
-                <button type="submit" className="button" disabled={question.loading} >{
+                <button type="submit" className="btn btn-primary btn-lg" disabled={question.loading} >{
                     question.loading ? "Saving ...." : "Save"
                 }</button>
             </form>

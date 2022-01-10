@@ -84,11 +84,11 @@ const ProfilePage = () => {
 
             <form onSubmit={submitGuardarCambios}>
               <div className="form-group">
-                <label>Nombres</label>
+                <label>Name</label>
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Nombres"
+                  placeholder="Name"
                   name="nombre"
                   value={profileInfo.nombre}
                   onChange={onChangeFormulario}
@@ -96,11 +96,11 @@ const ProfilePage = () => {
               </div>
 
               <div className="form-group">
-                <label>Apellidos</label>
+                <label>Last Name</label>
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Apellidos"
+                  placeholder="Last Name"
                   name="apellido"
                   value={profileInfo.apellido}
                   onChange={onChangeFormulario}
@@ -108,11 +108,11 @@ const ProfilePage = () => {
               </div>
 
               <div className="form-group">
-                <label>Correo Electrónico</label>
+                <label>Email</label>
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Correo"
+                  placeholder="email"
                   name="correo"
                   value={auth.email}
                   readOnly={true}
@@ -124,7 +124,7 @@ const ProfilePage = () => {
                 className="btn btn-primary font-weight-bold text-uppercase d-block w-100 mt-5"
                 disabled={sinCambios}
               >
-                Guardar Cambios
+                Save Changes
               </button>
             </form>
 

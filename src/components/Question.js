@@ -59,30 +59,30 @@ const Question = ({ question, excerpt, onDelete, favorite }) => {
 
   return (
     <article className={excerpt ? "question-excerpt" : "question"}>
-      <h2>{question.question}</h2>
+      <h2 className="mt-2">{question.question}</h2>
       <p>
         {question.category} - <small>{question.type}</small>
       </p>
 
       {auth.uid && (estadoFav != undefined) && (
         <button
-          className="button right"
+          className={`btn btn-${estadoFav ? "danger" : "success"} right m-2`}
           onClick={() => changeStateFav(estadoFav, question.id)}
         >
-          {estadoFav ? "unFav" : "Fav"}
+          {estadoFav ? "unFAV" : "ADD FAV"}
         </button>
       )}
 
       {onDelete && (
         <button
-          className="button right"
+          className="btn btn-danger right m-2"
           onClick={() => confirmDelete(question.id)}
         >
           DELETE
         </button>
       )}
       {excerpt && (
-        <Link to={`/question/${question.id}/${estadoFav}`} className="button">
+        <Link to={`/question/${question.id}/${estadoFav}`} className="btn btn-primary m-2">
           View Question
         </Link>
       )}

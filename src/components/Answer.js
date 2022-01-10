@@ -25,12 +25,13 @@ const Answer = ({answer, log}) => {
   };
 
   return ( <aside className="answer">
-  <p>{answer.answer}</p>
+    <p>{answer.answer}</p>
   {
-    log === answer.userId && < button className="button right" onClick={() => onDeleteAnswer(answer.id)}>
+    log === answer.userId && <button type= "button" className="btn btn-danger float-right" onClick={() => onDeleteAnswer(answer.id)}>
       DELETE
     </button>
   }
+  
 </aside> );
 }
  

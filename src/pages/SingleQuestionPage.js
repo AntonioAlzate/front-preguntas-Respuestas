@@ -46,7 +46,7 @@ const SingleQuestionPage = ({ match }) => {
     <section>
       {renderQuestion()}
       {auth.uid && (
-        <Link to={`/answer/${id}/${isFav}`} className="button right">
+        <Link to={`/answer/${id}/${isFav}`} className="btn btn-primary right m-2">
           Reply
         </Link>
       )}
