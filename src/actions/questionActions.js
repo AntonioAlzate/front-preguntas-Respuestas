@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const URL_BASE = "http://localhost:8080";
+const URL_BASE = "https://questions-answers-sofka.herokuapp.com";
 
 export const LOADING = "LOADING";
 export const LOADED_SUCCESS = "LOADED_SUCCESS";
@@ -67,7 +67,7 @@ export function postQuestion(question) {
         body: JSON.stringify(question),
       });
       const id = await response.text();
-      dispatch(success({ redirect: `/question/${id}` }));
+      dispatch(success({ redirect: `/question/${id}/false` }));
     } catch (error) {
       dispatch(failure());
     }

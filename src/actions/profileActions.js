@@ -25,7 +25,7 @@ export const QUITAR_FAVORITO_EXITO = 'QUITAR_FAVORITO_EXITO';
 export const QUITAR_FAVORITO_ERROR = 'QUITAR_FAVORITO_ERROR';
 
 
-const URL_BASE = "http://localhost:8080";
+const URL_BASE = "https://questions-answers-sofka.herokuapp.com";
 
 // Obtener perfil
 export function obtenerPerfilAction(userId) {
