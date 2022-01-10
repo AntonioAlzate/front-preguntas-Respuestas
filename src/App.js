@@ -21,6 +21,7 @@ import OwnerQuestionsPage from './pages/OwnerQuestionsPage'
 import { useAuthState } from "react-firebase-hooks/auth";
 import Footer from './components/Footer';
 import ProfilePage from './pages/ProfilePage';
+import FavoritesPage from './pages/FavoritesPage';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCTySyvuIDPg7RWF6ceuuwC2t3BEiAK38o",
@@ -52,11 +53,12 @@ const App = () => {
               return <HomePage><SignOut dispatch={dispatch} /></HomePage>
             }} />
             <Route exact path="/questions" component={QuestionsPage} />
-            <Route exact path="/question/:id" component={SingleQuestionPage} />
+            <Route exact path="/question/:id/:fav" component={SingleQuestionPage} />
             <Route exact path="/list" component={OwnerQuestionsPage} />
-            <Route exact path="/answer/:id" component={AnswerFormPage} />
+            <Route exact path="/answer/:id/:fav" component={AnswerFormPage} />
             <Route exact path="/new" component={QuestionFormPage} />
             <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/favorites" component={FavoritesPage} />
             <Redirect to="/" />
           </Switch>
         </> :

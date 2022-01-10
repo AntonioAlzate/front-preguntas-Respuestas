@@ -125,7 +125,7 @@ export function deleteAnswer(id, questionId) {
   };
 }
 
-export function postAnswer(answer, emailData, sendEmail) {
+export function postAnswer(answer, emailData, sendEmail, isFav) {
   return async (dispatch) => {
     dispatch(loading());
     try {
@@ -149,7 +149,7 @@ export function postAnswer(answer, emailData, sendEmail) {
         });
       }
 
-      dispatch(success({ redirect: `/question/${answer.questionId}` }));
+      dispatch(success({ redirect: `/question/${answer.questionId}/${isFav}` }));
     } catch (error) {
       dispatch(failure());
     }

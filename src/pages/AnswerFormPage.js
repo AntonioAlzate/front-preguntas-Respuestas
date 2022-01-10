@@ -12,7 +12,7 @@ const FormPage = ( {match}) => {
     const auth = useSelector(state => state.auth)
 
     const { register, handleSubmit } = useForm();
-    const { id } = match.params
+    const { id, fav } = match.params
     const history = useHistory();
 
     const onSubmit = data => {
@@ -26,7 +26,9 @@ const FormPage = ( {match}) => {
 
         const sendEmail = question.question.ownerEmail === auth.email ? false : true;
 
-        dispatch(postAnswer(data, emailData, sendEmail));
+        let isFav = fav === 'true' ? true : false;
+
+        dispatch(postAnswer(data, emailData, sendEmail, isFav));
     };
 
     useEffect(() => {
@@ -43,7 +45,7 @@ const FormPage = ( {match}) => {
         if (question.loading.question) return <p>Loading question...</p>
         if (question.hasErrors.question) return <p>Unable to display question.</p>
 
-        return <Question question={question.question} />
+        return <Question question={question.question}/>
     }
 
 
